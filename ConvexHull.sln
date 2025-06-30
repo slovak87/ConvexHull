@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull", "src\ConvexHull.csproj", "{CD97BB02-AD01-0971-4F79-0BE34B0B25FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull.Tests", "test\ConvexHull.Tests.csproj", "{374151E8-E791-82D5-2AB8-4C4CFEC4FEBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD97BB02-AD01-0971-4F79-0BE34B0B25FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD97BB02-AD01-0971-4F79-0BE34B0B25FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD97BB02-AD01-0971-4F79-0BE34B0B25FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD97BB02-AD01-0971-4F79-0BE34B0B25FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{374151E8-E791-82D5-2AB8-4C4CFEC4FEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374151E8-E791-82D5-2AB8-4C4CFEC4FEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374151E8-E791-82D5-2AB8-4C4CFEC4FEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374151E8-E791-82D5-2AB8-4C4CFEC4FEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F121417-4BBE-41C9-9ED7-C810CE9E0313}
+	EndGlobalSection
+EndGlobal
