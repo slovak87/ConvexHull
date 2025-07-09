@@ -36,4 +36,11 @@ internal class GeometryCalculator
     {
         return (A.X - O.X) * (B.Y - O.Y) - (A.Y - O.Y) * (B.X - O.X);
     }
+
+    internal static double DistanceSquared(Point a, Point b)
+    {
+        double dx = a.X - b.X;
+        double dy = a.Y - b.Y;
+        return dx * dx + dy * dy;
+    }
 }
