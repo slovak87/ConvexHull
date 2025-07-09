@@ -48,9 +48,9 @@ public static class ConvexHullCalculator
     private static List<Point> JarvisMarch(List<Point> points)
     {
         if (points.Count < 3)
-            return new List<Point>(points);
+            return [.. points];
 
-        List<Point> hull = new();
+        List<Point> hull = [];
 
         // Najdi levý nejnižší bod
         int leftMost = 0;
@@ -62,12 +62,33 @@ public static class ConvexHullCalculator
         do
         {
             hull.Add(points[p]);
-            int q = (p + 1) % points.Count;
+            int q = -1;
 
             for (int i = 0; i < points.Count; i++)
             {
-                if (GeometryCalculator.Cross(points[p], points[i], points[q]) > 0)
+                if (i == p)
+                    continue;
+
+                if (q == -1)
+                {
                     q = i;
+                    continue;
+                }
+
+                double cross = GeometryCalculator.Cross(points[p], points[q], points[i]);
+
+                if (cross > 0)
+                {
+                    q = i;
+                }
+                else if (cross == 0)
+                {
+                    // Pokud jsou kolineární, vezmeme ten nejvzdálenější bod
+                    double dist1 = GeometryCalculator.DistanceSquared(points[p], points[q]);
+                    double dist2 = GeometryCalculator.DistanceSquared(points[p], points[i]);
+                    if (dist2 > dist1)
+                        q = i;
+                }
             }
 
             p = q;
@@ -76,6 +97,7 @@ public static class ConvexHullCalculator
 
         return hull;
     }
+
 
     private static List<Point> QuickHull(List<Point> points)
     {
